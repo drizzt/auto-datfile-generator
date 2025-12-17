@@ -53,12 +53,15 @@ for key, value in no_intro_type.items():
     print(f"Set dat type to {key} ...")
 
     #set options
-    #Un-select Source Code
+    #Un-select Source Code, Non-Redump and Unofficial
     driver.find_element(by="name", value="set2").click()
+    driver.find_element(by="name", value="set3").click()
+    driver.find_element(by="name", value="set4").click()
 
-    #Select Redump Custom
+    #Select Aftermarket and Redump Custom
     if key == "standard" : #doesn't exist for parent-clone
         driver.find_element(by="name", value="set6").click()
+        driver.find_element(by="name", value="set8").click()
 
     print("Set up options ...")
 
